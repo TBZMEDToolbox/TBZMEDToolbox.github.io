@@ -1,0 +1,123 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/persian-datepicker.min.css"/>
+
+<script src="js/app.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/persian-date.min.js"></script>
+<script src="js/persian-datepicker.min.js"></script>
+
+</head>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".maindp").pDatepicker({
+    
+    autoClose: true,
+    observer: true,
+    minDate: 100000000000,
+    maxDate: Date.now(),
+    format: 'YYYY/MM/DD',
+    calendar:{
+        persian: {
+            locale: 'en',
+            leapYearMode: "astronomical"
+        }
+    },
+    
+    
+    
+    
+    "toolbox": {
+    "enabled": true,
+    "calendarSwitch": {
+      "enabled": false,
+      "format": "MMMM"
+    },
+    "todayButton": {
+      "enabled": false,
+      "text": {
+        "fa": "امروز",
+        "en": "Today"
+      }
+    },
+    "submitButton": {
+      "enabled": true,
+      "text": {
+        "fa": "تایید",
+        "en": "Submit"
+      }
+    },
+    "text": {
+      "btnToday": "امروز"
+    }
+  },
+    
+ });
+    
+});
+</script>
+
+
+<body>
+
+<div class="w3-display-container w3-pale-blue w3-center w3-display-middle">
+ <header class="w3-container w3-cyan">
+  <h2>Pediatric Percentiles</h2>
+</header> 
+  <br>
+  <form  class="w3-container";>
+  <label for="weight">Weight:</label><br>
+  <input class="w3-input" type="text" id="weight" name="weight" placeholder="Kilograms"><br>
+  <label for="height">Height/Stature:</label><br>
+  <input class="w3-input" type="text" id="height" name="height" placeholder="Centimeters"><br>
+  <label for="headc">Head Circumference:</label><br>
+  <input class="w3-input" type="text" id="headc" name="headc" placeholder="Centimeters"><br>
+  <label for="bday">Birth Date:</label><br>
+  <input class="maindp" id="bday" name="bday" /><br>
+  <br>
+  <input class="w3-radio" type="radio" id="sex" name="sex" value="male">
+  <label>Male</label>
+
+  <input class="w3-radio" type="radio" id="sex" name="sex" value="female">
+  <label>Female</label>
+  <br>
+
+</form> 
+
+
+<div class="w3-bar">
+  <button class="w3-button w3-blue w3-round-xxlarge w3-ripple"; onclick="parseUserInput();"><b>Show Percentiles</b></button>
+</div>
+
+<br><br>
+
+<footer class="w3-container w3-cyan">
+  <p>Rasa Khosrofar TBZMED941</p>
+</footer> 
+
+</div>
+
+
+
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+ 
+ 
