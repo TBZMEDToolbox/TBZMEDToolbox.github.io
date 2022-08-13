@@ -8,6 +8,7 @@ var URLS = [
   `${GHPATH}/css/persian-datepicker.min.css`,
   `${GHPATH}/img/maskable_icon_192.png`,
   `${GHPATH}/img/maskable_icon_512.png`,
+  `${GHPATH}/img/apple-touch-icon-180.png`,
   `${GHPATH}/js/app.js`,
   `${GHPATH}/js/jquery.js`,
   `${GHPATH}/js/persian-date.min.js`,
