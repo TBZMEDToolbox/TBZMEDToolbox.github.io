@@ -1,4 +1,4 @@
-<html>
+<html style=" position:relative;">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,62 +63,61 @@
       });
     });
   </script>
-  <body>
-    <div class="w3-display-container w3-pale-blue w3-center">
-      <header class="w3-container w3-cyan">
+  <body style="">
+    <div class="w3-pale-blue w3-center">
+      <header class="w3-container w3-cyan" style="min-height: 5vh;">
         <h4>
           <b>Pediatric Percentiles</b>
         </h4>
       </header>
-      <br>
-      <div class="w3-row-padding">
+      
+      <div class="w3-row-padding" style="min-height: 30vh;" >
         <div class="w3-third">
-          <label>Weight</label>
-          <input class="w3-input w3-border" id="weight" name="weight" type="tel" pattern="[0-9]*" placeholder="Kilograms">
+          <label style="font-size: 2.2vh;" >Weight</label>
+          <input class="w3-input w3-border" id="weight" name="weight" type="tel" pattern="[0-9]*" placeholder="Kilograms" style="font-size: 2.2vh;" >
         </div>
         <div class="w3-third">
-          <label>Hight/Stature</label>
-          <input class="w3-input w3-border" id="height" name="height" type="tel" pattern="[0-9]*" placeholder="Centimeters">
+          <label style="font-size: 2.2vh;" >Hight/Stature</label>
+          <input class="w3-input w3-border" id="height" name="height" type="tel" pattern="[0-9]*" placeholder="Centimeters" style="font-size: 2.2vh;" >
         </div>
         <div class="w3-third">
-          <label>Head Circumference</label>
-          <input class="w3-input w3-border" id="headc" name="headc" type="tel" pattern="[0-9]*" placeholder="Centimeters">
+          <label style="font-size: 2.2vh;" >Head Circumference</label>
+          <input class="w3-input w3-border" id="headc" name="headc" type="tel" pattern="[0-9]*" placeholder="Centimeters" style="font-size: 2.2vh;" >
         </div>
       </div>
-      <br>
-      <div class="w3-row-padding">
+      
+      <div class="w3-row-padding" style="min-height: 10vh;" >
         <div class="w3-half">
-          <label for="bday">Birth Date:</label>
-          <input class="maindp" id="bday" name="bday" type="tel" pattern="[0-9\/]*" />
+          <label for="bday" style="font-size: 2.2vh;" >Birth Date:</label>
+          <input class="maindp" id="bday" name="bday" type="tel" pattern="[0-9\/]*" style="font-size: 2vh;" />
         </div>
         <div class="w3-half">
           <input class="w3-radio" type="radio" id="sex0" name="sex" value=0>
-          <label>Male</label>
+          <label style="font-size: 2.2vh;" >Male</label>
           <input class="w3-radio" type="radio" id="sex1" name="sex" value=1>
-          <label>Female</label>
+          <label style="font-size: 2.2vh;"  >Female</label>
         </div>
       </div>
-      <br>
-      <div class="w3-row-padding">
+      
+      <div class="w3-row-padding" style="min-height: 25vh;" >
         <div class="w3-third">
-          <input class="w3-input w3-border" style="font-weight: bold; text-align: center; font-size: 1.1em;" type="text" id="weightres" placeholder="Weight%">
+          <input class="w3-input w3-border" style="font-weight: bold; text-align: center; font-size: 2.5vh;" type="text" id="weightres" placeholder="Weight%">
         </div>
         <div class="w3-third">
-          <input class="w3-input w3-border" style="font-weight: bold; text-align: center; font-size: 1.1em;" type="text" id="heightres" placeholder="Height%">
+          <input class="w3-input w3-border" style="font-weight: bold; text-align: center; font-size: 2.5vh;" type="text" id="heightres" placeholder="Height%">
         </div>
         <div class="w3-third">
-          <input class="w3-input w3-border" style="font-weight: bold; text-align: center; font-size: 1.1em;" type="text" id="headcres" placeholder="Head Circumference%">
+          <input class="w3-input w3-border" style="font-weight: bold; text-align: center; font-size: 2.5vh;" type="text" id="headcres" placeholder="Head Circumference%">
         </div>
       </div>
-      <br>
-      <div class="w3-bar">
+      
+      <div class="w3-bar" style="min-height: 10vh;" >
         <button class="w3-button w3-blue w3-round-xxlarge w3-ripple" ; onclick="parseUserInput();">
           <b>Show Percentiles</b>
         </button>
       </div>
-      <br>
-      <br>
-      <footer class="w3-container w3-cyan">
+      
+      <footer class="w3-container w3-cyan" style="min-height: 5vh;" >
         <p>TBZMED941 Rasa Khosrofar</p>
       </footer>
     </div>
