@@ -9,9 +9,16 @@
   "display": "standalone", 
   "icons": [
       {
-        "src": "/PediatricPercentile/img/icon.png",
+        "src": "/PediatricPercentile/img/maskable_icon_192.png",
+        "sizes": "192x192",
         "type": "image/png",
-        "sizes": "699x699"
+        "purpose": "maskable"
+      },
+    {
+        "src": "/PediatricPercentile/img/maskable_icon_512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
       }
   ]
 }
