@@ -1,6 +1,6 @@
 {
   "name": "Pediatric Percentiles",
-  "short_name": "TBZPP",
+  "short_name": "Pediatric Percentiles",
   "description": "Calculator for pediatric growth",
   "scope": "/PediatricPercentile/",
   "start_url": "/PediatricPercentile/",
