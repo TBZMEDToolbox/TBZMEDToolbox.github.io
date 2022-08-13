@@ -1,0 +1,17 @@
+{
+  "name": "Pediatric Percentiles",
+  "short_name": "TBZPP",
+  "description": "Calculator for pediatric growth",
+  "scope": "/PediatricPercentile/",
+  "start_url": "/PediatricPercentile/",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "standalone", 
+  "icons": [
+      {
+        "src": "/PediatricPercentile/img/icon.png",
+        "type": "image/png",
+        "sizes": "699x699"
+      }
+  ]
+}
