@@ -12,7 +12,6 @@ function getZPercent(z) {
 
     }
     sum += 0.5;
-
     return sum;
 }
 
@@ -111,7 +110,6 @@ function getAgeMonths(birthDate) {
 
 function getPercentile(sex, index, parameter, amount) {
     let ZScore = getZScore(sex, index, parameter, amount);
-    console.log(ZScore, "ZSCCCC", amount);
     if (ZScore < -6.5) {
         outputColorSelector(parameter, "tomato");
         return ("Too LOW");
