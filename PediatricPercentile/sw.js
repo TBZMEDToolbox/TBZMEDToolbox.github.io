@@ -8,9 +8,9 @@ var URLS = [
   `${GHPATH}/css/persian-datepicker.min.css`,
   `${GHPATH}/img/icon.png`,
   `${GHPATH}/js/app.js`,
-   `${GHPATH}/js/jquery.js`,
-   `${GHPATH}/js/persian-date.min.js`,
-   `${GHPATH}/js/persian-datepicker.min.js`,
+  `${GHPATH}/js/jquery.js`,
+  `${GHPATH}/js/persian-date.min.js`,
+  `${GHPATH}/js/persian-datepicker.min.js`
 ]
 
 var CACHE_NAME = APP_PREFIX + VERSION
