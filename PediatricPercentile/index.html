@@ -1,10 +1,11 @@
 <html>
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08bcd4"/>
     <title>Pediatric Percentiles Calculator</title>
     <link rel="stylesheet" href="css/w3.css">
-    <link rel="stylesheet" href="css/persian-datepicker.min.css"/>
+    <link rel="stylesheet" href="css/persian-datepicker.min.css" />
     <script src="js/app.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/persian-date.min.js"></script>
@@ -14,139 +15,112 @@
     <link rel="apple-touch-icon" href="/PediatricPercentile/img/apple-touch-icon-180.png">
     <script>
       if (navigator.serviceWorker) {
-        navigator.serviceWorker.register (
-          '/PediatricPercentile/sw.js',
-          {scope: '/PediatricPercentile/'}
-        )
+        navigator.serviceWorker.register('/PediatricPercentile/sw.js', {
+          scope: '/PediatricPercentile/'
+        })
       }
-  </script>
-  
-</head>
-<script type="text/javascript">
-$(document).ready(function() {
-    $(".maindp").pDatepicker({
-    inline: true,
-    observer: true,
-    autoClose: true,
-    minDate: 100000000000,
-    maxDate: Date.now(),
-    format: 'YYYY/MM/DD',
-    calendar:{
-        persian: {
+    </script>
+  </head>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".maindp").pDatepicker({
+        inline: true,
+        observer: true,
+        autoClose: true,
+        minDate: 100000000000,
+        maxDate: Date.now(),
+        format: 'YYYY/MM/DD',
+        calendar: {
+          persian: {
             locale: 'en',
             leapYearMode: "astronomical"
-        }
-    },
-    
-    "toolbox": {
-    "enabled": true,
-    "calendarSwitch": {
-      "enabled": false,
-      "format": "MMMM"
-    },
-    "todayButton": {
-      "enabled": false,
-      "text": {
-        "fa": "امروز",
-        "en": "Today"
-      }
-    },
-    "submitButton": {
-      "enabled": true,
-      "text": {
-        "fa": "تایید",
-        "en": "Submit"
-      }
-    },
-    "text": {
-      "btnToday": "امروز"
-    }
-  },
-    
- });
-    
-});
-</script>
-
-
-<body>
-
-<div class="w3-display-container w3-pale-blue w3-center">
- <header class="w3-container w3-cyan">
-  <h4><b>Pediatric Percentiles</b></h4>
-</header><br>
-
- <div class="w3-row-padding">
-  <div class="w3-third">
-    <label>Weight</label>
-    <input class="w3-input w3-border" id="weight" name="weight" type="tel" pattern="[0-9]*" placeholder="Kilograms">
-  </div>
-  <div class="w3-third">
-    <label>Hight/Stature</label>
-    <input class="w3-input w3-border" id="height" name="height" type="tel" pattern="[0-9]*"  placeholder="Centimeters">
-  </div>
-  <div class="w3-third">
-    <label>Head Circumference</label>
-    <input class="w3-input w3-border" id="headc" name="headc" type="tel" pattern="[0-9]*"  placeholder="Centimeters">
-  </div>
-</div><br>
-  
-
-<div class="w3-row-padding">
-<div class="w3-half">
-  <label for="bday">Birth Date:</label>
-  <input class="maindp" id="bday" name="bday" type="tel" pattern="[0-9\/]*"  />
-</div>
-<div class="w3-half">
-  <input class="w3-radio" type="radio" id="sex0" name="sex" value=0>
-  <label>Male</label>
-
-  <input class="w3-radio" type="radio" id="sex1" name="sex" value=1>
-  <label>Female</label>
-</div>
-</div><br>
-
- <div class="w3-row-padding">
-  <div class="w3-third">
-    <input class="w3-input w3-border" style="font-weight: bold; text-align: center; font-size: 1.1em;" type="text" id="weightres" placeholder="Weight%">
-  </div>
-  <div class="w3-third">
-    <input class="w3-input w3-border" style="font-weight: bold; text-align: center; font-size: 1.1em;" type="text" id="heightres" placeholder="Height%">
-  </div>
-  <div class="w3-third">
-    <input class="w3-input w3-border" style="font-weight: bold; text-align: center; font-size: 1.1em;" type="text" id="headcres" placeholder="Head Circumference%">
-  </div>
-</div><br>
-
-<div class="w3-bar">
-  <button class="w3-button w3-blue w3-round-xxlarge w3-ripple"; onclick="parseUserInput();"><b>Show Percentiles</b></button>
-</div><br><br>
-
-<footer class="w3-container w3-cyan">
-  <p>TBZMED941 Rasa Khosrofar</p>
-</footer> 
-
-</div>
-
-
-
-
-</body>
-
-</html> 
-
-
-
-
-
-
-
-
-
-
- 
-
- 
-
- 
- 
+          }
+        },
+        "toolbox": {
+          "enabled": true,
+          "calendarSwitch": {
+            "enabled": false,
+            "format": "MMMM"
+          },
+          "todayButton": {
+            "enabled": false,
+            "text": {
+              "fa": "امروز",
+              "en": "Today"
+            }
+          },
+          "submitButton": {
+            "enabled": true,
+            "text": {
+              "fa": "تایید",
+              "en": "Submit"
+            }
+          },
+          "text": {
+            "btnToday": "امروز"
+          }
+        },
+      });
+    });
+  </script>
+  <body>
+    <div class="w3-display-container w3-pale-blue w3-center">
+      <header class="w3-container w3-cyan">
+        <h4>
+          <b>Pediatric Percentiles</b>
+        </h4>
+      </header>
+      <br>
+      <div class="w3-row-padding">
+        <div class="w3-third">
+          <label>Weight</label>
+          <input class="w3-input w3-border" id="weight" name="weight" type="tel" pattern="[0-9]*" placeholder="Kilograms">
+        </div>
+        <div class="w3-third">
+          <label>Hight/Stature</label>
+          <input class="w3-input w3-border" id="height" name="height" type="tel" pattern="[0-9]*" placeholder="Centimeters">
+        </div>
+        <div class="w3-third">
+          <label>Head Circumference</label>
+          <input class="w3-input w3-border" id="headc" name="headc" type="tel" pattern="[0-9]*" placeholder="Centimeters">
+        </div>
+      </div>
+      <br>
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <label for="bday">Birth Date:</label>
+          <input class="maindp" id="bday" name="bday" type="tel" pattern="[0-9\/]*" />
+        </div>
+        <div class="w3-half">
+          <input class="w3-radio" type="radio" id="sex0" name="sex" value=0>
+          <label>Male</label>
+          <input class="w3-radio" type="radio" id="sex1" name="sex" value=1>
+          <label>Female</label>
+        </div>
+      </div>
+      <br>
+      <div class="w3-row-padding">
+        <div class="w3-third">
+          <input class="w3-input w3-border" style="font-weight: bold; text-align: center; font-size: 1.1em;" type="text" id="weightres" placeholder="Weight%">
+        </div>
+        <div class="w3-third">
+          <input class="w3-input w3-border" style="font-weight: bold; text-align: center; font-size: 1.1em;" type="text" id="heightres" placeholder="Height%">
+        </div>
+        <div class="w3-third">
+          <input class="w3-input w3-border" style="font-weight: bold; text-align: center; font-size: 1.1em;" type="text" id="headcres" placeholder="Head Circumference%">
+        </div>
+      </div>
+      <br>
+      <div class="w3-bar">
+        <button class="w3-button w3-blue w3-round-xxlarge w3-ripple" ; onclick="parseUserInput();">
+          <b>Show Percentiles</b>
+        </button>
+      </div>
+      <br>
+      <br>
+      <footer class="w3-container w3-cyan">
+        <p>TBZMED941 Rasa Khosrofar</p>
+      </footer>
+    </div>
+  </body>
+</html>
