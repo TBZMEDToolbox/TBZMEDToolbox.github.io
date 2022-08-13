@@ -6,7 +6,7 @@ var URLS = [
   `${GHPATH}/index.html`,
   `${GHPATH}/css/w3.css`,
   `${GHPATH}/css/persian-datepicker.min.css`,
- //`${GHPATH}/img/icon.png`,
+  `${GHPATH}/img/icon.png`,
   `${GHPATH}/js/app.js`,
    `${GHPATH}/js/jquery.js`,
    `${GHPATH}/js/persian-date.min.js`,
