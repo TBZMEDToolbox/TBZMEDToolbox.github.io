@@ -9,14 +9,22 @@
     <script src="js/jquery.js"></script>
     <script src="js/persian-date.min.js"></script>
     <script src="js/persian-datepicker.min.js"></script>
+    <script>
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register (
+          '/PediatricPercentile/sw.js',
+          {scope: '/PediatricPercentile/'}
+        )
+      }
+  </script>
+  
 </head>
-
 <script type="text/javascript">
 $(document).ready(function() {
     $(".maindp").pDatepicker({
-    
-    autoClose: true,
+    inline: true,
     observer: true,
+    autoClose: true,
     minDate: 100000000000,
     maxDate: Date.now(),
     format: 'YYYY/MM/DD',
@@ -26,9 +34,6 @@ $(document).ready(function() {
             leapYearMode: "astronomical"
         }
     },
-    
-    
-    
     
     "toolbox": {
     "enabled": true,
@@ -65,37 +70,57 @@ $(document).ready(function() {
 
 <div class="w3-display-container w3-pale-blue w3-center">
  <header class="w3-container w3-cyan">
-  <h2>Pediatric Percentiles</h2>
-</header> 
-  <br>
-  <form  class="w3-container";>
-  <label for="weight">Weight:</label><br>
-  <input class="w3-input" type="text" id="weight" name="weight" placeholder="Kilograms"><br>
-  <label for="height">Height/Stature:</label><br>
-  <input class="w3-input" type="text" id="height" name="height" placeholder="Centimeters"><br>
-  <label for="headc">Head Circumference:</label><br>
-  <input class="w3-input" type="text" id="headc" name="headc" placeholder="Centimeters"><br>
-  <label for="bday">Birth Date:</label><br>
-  <input class="maindp" id="bday" name="bday" /><br>
-  <br>
-  <input class="w3-radio" type="radio" id="sex" name="sex" value="male">
+  <h4><b>Pediatric Percentiles</b></h4>
+</header><br>
+
+ <div class="w3-row-padding">
+  <div class="w3-third">
+    <label>Weight</label>
+    <input class="w3-input w3-border" id="weight" name="weight" type="tel" pattern="[0-9]*" placeholder="Kilograms">
+  </div>
+  <div class="w3-third">
+    <label>Hight/Stature</label>
+    <input class="w3-input w3-border" id="height" name="height" type="tel" pattern="[0-9]*"  placeholder="Centimeters">
+  </div>
+  <div class="w3-third">
+    <label>Head Circumference</label>
+    <input class="w3-input w3-border" id="headc" name="headc" type="tel" pattern="[0-9]*"  placeholder="Centimeters">
+  </div>
+</div><br>
+  
+
+<div class="w3-row-padding">
+<div class="w3-half">
+  <label for="bday">Birth Date:</label>
+  <input class="maindp" id="bday" name="bday" type="tel" pattern="[0-9\/]*"  />
+</div>
+<div class="w3-half">
+  <input class="w3-radio" type="radio" id="sex0" name="sex" value=0>
   <label>Male</label>
 
-  <input class="w3-radio" type="radio" id="sex" name="sex" value="female">
+  <input class="w3-radio" type="radio" id="sex1" name="sex" value=1>
   <label>Female</label>
-  <br>
+</div>
+</div><br>
 
-</form> 
-
+ <div class="w3-row-padding">
+  <div class="w3-third">
+    <input class="w3-input w3-border" style="font-weight: bold; text-align: center; font-size: 1.1em;" type="text" id="weightres" placeholder="Weight%">
+  </div>
+  <div class="w3-third">
+    <input class="w3-input w3-border" style="font-weight: bold; text-align: center; font-size: 1.1em;" type="text" id="heightres" placeholder="Height%">
+  </div>
+  <div class="w3-third">
+    <input class="w3-input w3-border" style="font-weight: bold; text-align: center; font-size: 1.1em;" type="text" id="headcres" placeholder="Head Circumference%">
+  </div>
+</div><br>
 
 <div class="w3-bar">
   <button class="w3-button w3-blue w3-round-xxlarge w3-ripple"; onclick="parseUserInput();"><b>Show Percentiles</b></button>
-</div>
-
-<br><br>
+</div><br><br>
 
 <footer class="w3-container w3-cyan">
-  <p>Rasa Khosrofar TBZMED941</p>
+  <p>TBZMED941 Rasa Khosrofar</p>
 </footer> 
 
 </div>
@@ -104,6 +129,7 @@ $(document).ready(function() {
 
 
 </body>
+
 </html> 
 
 
