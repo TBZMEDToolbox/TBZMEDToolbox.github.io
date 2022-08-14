@@ -65,14 +65,15 @@
   </script>
   <script data-goatcounter="https://tbzmedtoolbox.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
-  <body style="">
-    <div class="w3-pale-blue w3-center">
-      <header class="w3-container w3-cyan" style="min-height: 5vh;">
+  <body>
+    <header class="w3-container w3-cyan" style="min-height: 5vh;">
         <h4>
           <b>Pediatric Percentiles</b>
         </h4>
-      </header>
-      
+    </header> 
+    <div class="w3-pale-blue w3-center">
+      <div style="min-height: 5vh;">
+      </div>
       <div class="w3-row-padding" style="min-height: 30vh;" >
         <div class="w3-third">
           <label style="font-size: 2.2vh;" >Weight</label>
@@ -118,10 +119,38 @@
           <b>Show Percentiles</b>
         </button>
       </div>
-      
-      <footer class="w3-container w3-cyan" style="min-height: 5vh;" >
-        <p>TBZMED941 Rasa Khosrofar</p>
-      </footer>
+      <div class="w3-bar w3-border w3-round w3-cyan" style="min-width: 100vw;">
+        <a href="#" class="w3-bar-item w3-button w3-border-right w3-blue">Home</a>
+        <a onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button w3-border-right">About</a>
+        <a href="https://tbzmedtoolbox.github.io" class="w3-bar-item w3-button w3-border-right">TBZMEDToolbox</a>
+      </div>
     </div>
+    
+    <div id="id01" class="w3-modal">
+  <div class="w3-modal-content">
+
+    <header class="w3-container w3-teal">
+      <h3>About App</h3>
+    </header>
+
+    <div class="w3-container">
+      <p dir="rtl" > جهت استفاده از اپ، عدد مروبط به هر کدام از وزن، قد، یا دور سر را میتوانید به طور جداگانه
+ وارد کنید و هرکدام به طور جداگانه محاسبه شده و نشان داده می‌شوند.<p/>
+      <p dir="rtl" > همچنین مهمترین قابلیت اپ، امکان نصب آن جهت استفاده ی آفلاین بدون نیاز به اینترنت میباشد. 
+جهت استفاده از این قابلیت، گزینه ی Add to Home screen  و یا Install App  مرورگرتان در قسمت منوی آن را لمس نمایید.
+در گوشی های برند Apple در صورت عدم وجود این گزینه در سایر مرورگر ها میتوانید از مرورگر Safari اپ را نصب نمایید.<p/>
+      <p dir="rtl">  در نسخه های بعدی قابلیت محاسبه ی صدک در تولد و همچنین صدک های نوزادان و شیرخواران و کودکان پره ترم اضافه خواهد شد.
+</p>
+    </div>
+
+    <footer class="w3-container w3-teal" style="min-height: 5vh;">
+<p><b>Version 0.1.4 by Rasa Khosrofar<b></p>
+       <button class="w3-button w3-blue w3-round-xxlarge w3-ripple w3-display-bottomright" ; onclick="document.getElementById('id01').style.display='none'">
+          <b>Close</b>
+        </button> 
+    </footer>
+
+  </div>
+</div>
   </body>
 </html>
