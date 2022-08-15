@@ -1,9 +1,3 @@
-const initialLoad = localStorage.getItem("loaded");
-if(!initialLoad){
-    document.getElementById('id01').style.display='block'; 
-    localStorage.setItem("loaded", "Yes"); 
-}
-
 function getZPercent(z) {
     var factK = 1;
     var sum = 0;
@@ -138,7 +132,6 @@ function getPercentile(sex, index, parameter, amount) {
 
 
 function parseUserInput() {
-
     let bday = document.getElementById("bday").value;
     let weight = document.getElementById("weight").value;
     let height = document.getElementById("height").value;
@@ -158,20 +151,18 @@ function parseUserInput() {
         alert("No Birthday Entered");
         submitOK = false;
     } else {
-
         let splitDate = bday.split("/");
         if (splitDate.length != 3) {
             alert("Invalid Birthday");
             submitOK = false;
         } else {
-
             let gregorianDate = jalali_to_gregorian(parseInt(splitDate[0]), parseInt(splitDate[1]), parseInt(splitDate[2]));
             let birthDate = new Date(gregorianDate[0] + "-" + gregorianDate[1] + "-" + gregorianDate[2]);
             let ageMonths = Math.floor(getAgeMonths(birthDate));
             var ageIndex = ageMonths + 1;
 
             if (isNaN(ageMonths) || ageMonths < 0 || ageMonths > 240) {
-                alert("Age is beyond the expected range", ageMonths, birthDate, gregorianDate, splitDate);
+                alert("Age is beyond the expected range");
                 submitOK = false;
             }
 
@@ -183,33 +174,41 @@ function parseUserInput() {
     if (submitOK == false) {
         return false;
     } else {
-
+       
         if (weight != null && weight != '' && !isNaN(weight)) {
+        	
             document.getElementById("weightres").value = (getPercentile(sex, ageIndex, 0, weight) + "%");
         } else {
+        	
             outputColorSelector(0, "lightpink");
             document.getElementById("weightres").value = "Weight Not Entered"
         }
 
         if (height != null && height != '' && !isNaN(height)) {
+        	
             document.getElementById("heightres").value = (getPercentile(sex, ageIndex, 1, height) + "%");
         } else {
+        	
             outputColorSelector(1, "lightpink");
             document.getElementById("heightres").value = "Height Not Entered"
         }
 
         if (headc != null && headc != '' && !isNaN(headc)) {
             if (ageIndex <= 36) {
+            	
                 document.getElementById("headcres").value = (getPercentile(sex, ageIndex, 2, headc) + "%");
             } else {
+            	
                 outputColorSelector(2, "lightpink");
                 document.getElementById("headcres").value = "Head C. Max 36 Months Old"
             }
         } else {
+        	
             if (ageIndex > 36) {
                 outputColorSelector(2, "lightpink");
                 document.getElementById("headcres").value = "Head C. Max 36 Months Old"
             } else {
+            	
                 outputColorSelector(2, "lightpink");
                 document.getElementById("headcres").value = "Head C. Not Entered"
             }
@@ -234,24 +233,6 @@ function outputColorSelector(parameter, color) {
     input.style.backgroundColor = color;
 }
 
-
-//Cache Control
-window.addEventListener('load', function(e) {
-
-  window.applicationCache.addEventListener('updateready', function(e) {
-    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-      // Browser downloaded a new app cache.
-      // Swap it in and reload the page to get the new hotness.
-      window.applicationCache.swapCache();
-      if (confirm('A new version of this site is available. Load it?')) {
-        window.location.reload();
-      }
-    } else {
-      // Manifest didn't changed. Nothing new to server.
-    }
-  }, false);
-
-}, false);
 
 
 
