@@ -1,3 +1,9 @@
+const initialLoad = localStorage.getItem("loaded");
+if(!initialLoad){
+    document.getElementById('id01').style.display='block'; 
+    localStorage.setItem("loaded", "Yes"); 
+}
+
 function getZPercent(z) {
     var factK = 1;
     var sum = 0;
