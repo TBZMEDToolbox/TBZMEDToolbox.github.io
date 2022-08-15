@@ -15,6 +15,8 @@ function getZPercent(z) {
     return sum;
 }
 
+
+
 /**  Gregorian & Jalali (Hijri_Shamsi,Solar) Date Converter Functions
 Author: JDF.SCR.IR =>> Download Full Version :  http://jdf.scr.ir/jdf
 License: GNU/LGPL _ Open Source & Free :: Version: 2.81 : [2020=1399] **/
@@ -232,6 +234,26 @@ function outputColorSelector(parameter, color) {
     }
     input.style.backgroundColor = color;
 }
+
+
+//Cache Control
+window.addEventListener('load', function(e) {
+
+  window.applicationCache.addEventListener('updateready', function(e) {
+    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+      // Browser downloaded a new app cache.
+      // Swap it in and reload the page to get the new hotness.
+      window.applicationCache.swapCache();
+      if (confirm('A new version of this app is available. Load it?')) {
+        window.location.reload();
+      }
+    } else {
+      // Manifest didn't changed. Nothing new to server.
+    }
+  }, false);
+
+}, false);
+
 
 
 //CDC datasets of up to 240 months.
