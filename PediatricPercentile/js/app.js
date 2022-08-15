@@ -165,7 +165,7 @@ function parseUserInput() {
             var ageIndex = ageMonths + 1;
 
             if (isNaN(ageMonths) || ageMonths < 0 || ageMonths > 240) {
-                alert("Age is beyond the expected range");
+                alert("Age is beyond the expected range", ageMonths, birthDate, gregorianDate, splitDate);
                 submitOK = false;
             }
 
