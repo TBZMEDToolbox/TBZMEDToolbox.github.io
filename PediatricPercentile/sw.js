@@ -1,6 +1,6 @@
 var GHPATH = '/PediatricPercentile';
 var APP_PREFIX = 'tbzrkhpp_';
-var VERSION = 'version 0017';
+var VERSION = 'version 0018';
 var URLS = [    
   `${GHPATH}/`,
   `${GHPATH}/index.html`,

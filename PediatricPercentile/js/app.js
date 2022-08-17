@@ -135,7 +135,7 @@ function getPercentile(sex, index, parameter, amount) {
 
 function parseUserInput() {
     let bday = document.getElementById("bday").value;
-    let weight = document.getElementById("weight").value;
+    let weight = (document.getElementById("weight").value)/1000 ;
     let height = document.getElementById("height").value;
     let headc = document.getElementById("headc").value;
     let submitOK = true;
